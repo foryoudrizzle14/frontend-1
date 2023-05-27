@@ -7,7 +7,7 @@ const Input = ({ isInputOpen, SetisInputOpen }) => {
   return (
     <div>
       <HeadMainBtn onClick={() => SetisInputOpen(!isInputOpen)}>
-        HangHae99 검색
+        검색
         <div styled={{ backGroundColor: "transparent" }}>
           <FaFilter className="filter" style={{ color: "white", cursor: "pointer" }} />
           <FaSearch styled={{ color: "white" }} />

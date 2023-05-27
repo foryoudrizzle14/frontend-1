@@ -6,8 +6,8 @@ import { useRef } from "react";
 import { useSelector } from "react-redux";
 
 const PostBox = ({ chatArr }) => {
-  const userinfo = useSelector(state => state.slack.userinfo);
-  console.log(userinfo);
+  const userinfo = useSelector(state => state.slack);
+ 
 
   //스크롤 처음에 아래에 위치하게하기
   const scrollRef = useRef();

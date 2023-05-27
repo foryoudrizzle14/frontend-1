@@ -12,12 +12,17 @@ const SideChannel = ({ Channels, PostChannel, SetChannels, Channel, SetChannel }
       <ChannelCtn>
         <ChannelHeader>
           채널
-          <ChannelTxt style={{ cursor: "pointer" }} onClick={() => SetisOpen(!isOpen)}>
+          <ChannelTxt style={{ cursor: "pointer" }} 
+          onClick={() => SetisOpen(!isOpen)}>
             버튼
           </ChannelTxt>
         </ChannelHeader>
         {Channels?.map(channel => {
-          return <ChannelBox Channel={Channel} SetChannel={SetChannel} SetChannels={SetChannels} channel={channel} />;
+          return <ChannelBox 
+          Channel={Channel} 
+          SetChannel={SetChannel} 
+          SetChannels={SetChannels} 
+          channel={channel} />;
         })}
       </ChannelCtn>
       <Modal

@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { RiSendPlane2Fill } from "react-icons/ri";
 import axios from "axios";
+import { io } from "socket.io-client";
 
 const ChattingBox = ({ setChatArr, chatArr }) => {
+  const socket = io ("http://43.200.178.84", {
+    transports: ["websocket"],
+  });
+
   const [Message, setMessage] = useState("");
 
   const handleMessageSubmit = async () => {
@@ -17,7 +22,7 @@ const ChattingBox = ({ setChatArr, chatArr }) => {
       });
 
       // Update the chatArr state with the new message
-      setChatArr([...chatArr, response.data]);
+      setChatArr([...chatArr, response.data.socket]);
 
       // Clear the message input
       setMessage("");
@@ -47,7 +52,9 @@ const ChattingBox = ({ setChatArr, chatArr }) => {
   return (
     <InputCtn>
       <InputTopBox></InputTopBox>
-      <InputMidBox value={Message} onChange={handleInputChange} placeholder="메시지 보내기" />
+      <InputMidBox value={Message} 
+      onChange={handleInputChange} 
+      placeholder="메시지 보내기" />
       <InputBottomBox>
         <SendIcon onClick={handleMessageSubmit}>
           <RiSendPlane2Fill />
@@ -56,6 +63,8 @@ const ChattingBox = ({ setChatArr, chatArr }) => {
     </InputCtn>
   );
 };
+
+export default ChattingBox;
 
 const InputCtn = styled.div`
   position: fixed;
@@ -98,4 +107,4 @@ const SendIcon = styled.div`
   margin-right: 10px;
 `;
 
-export default ChattingBox;
+
