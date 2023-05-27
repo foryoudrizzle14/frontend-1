@@ -10,7 +10,11 @@ const MainBody = ({ Channels, Channel }) => {
   return (
     <MainCtn>
       <PostBox chatArr={chatArr} />
-      <ChattingBox Channel={Channel} Channels={Channels} setChatArr={setChatArr} chatArr={chatArr} />
+      <ChattingBox
+      Channel={Channel} 
+      Channels={Channels} 
+      setChatArr={setChatArr} 
+      chatArr={chatArr} />
     </MainCtn>
   );
 };
