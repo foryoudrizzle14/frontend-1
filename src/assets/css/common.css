@@ -1,0 +1,98 @@
+.wrap {
+  min-width: 1200px;
+  height: 100vh;
+}
+.wrap .container {
+  width: 100%;
+  display: flex;
+}
+
+.wrap .container .left_area {
+  width: 300px;
+  min-height: 100vh;
+  border-right: 1px solid #420b36;
+  box-sizing: border-box;
+  background-color: #41103b;
+}
+.wrap .container .right_area {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lnb {
+  width: inherit;
+  background-color: #3c0931;
+}
+/* .lnb .logo img {
+  display: block;
+  margin: 40px auto;
+} */
+
+.lnb .menus {
+  padding: 0 25px 0 25px;
+}
+.lnb .menus .tit {
+  font-size: 18px;
+  font-weight: 700;
+  color: #41103b;
+  letter-spacing: -0.18px;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #434855;
+}
+.lnb .menus li {
+  position: relative;
+  border-bottom: 4px solid #3c0931;
+  min-height: 37px;
+}
+
+.lnb .menus li a {
+  display: block;
+  font-weight: 400;
+  padding: 8px 0;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #897c85;
+  letter-spacing: -0.13px;
+  line-height: 19px;
+  padding-right: 18px;
+}
+
+.lnb .menus li.on a {
+  font-weight: 800;
+  color: #220822;
+}
+
+.top_area {
+  width: inherit;
+  height: 70px;
+  background-color: rgb(71, 30, 71);
+}
+.top_area .menus {
+  padding-top: 10px;
+}
+.top_area .menus ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.top_area .menus ul li a {
+  display: block;
+  font-size: 15px;
+  height: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: rgba(199, 210, 237, 0.8);
+}
+.top_area .menus ul li.on a {
+  color: #fbf5f5;
+}
+
+.contents_area {
+  position: relative;
+  width: inherit;
+  box-sizing: border-box;
+}
+.contents_area .contents {
+  min-height: 600px;
+  margin: 30px;
+}
