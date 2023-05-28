@@ -4,6 +4,7 @@ import { RiSendPlane2Fill } from "react-icons/ri";
 import axios from "axios";
 import { io } from "socket.io-client";
 
+
 const ChattingBox = ({ setChatArr, chatArr }) => {
   const socket = io ("http://43.200.178.84", {
     transports: ["websocket"],
@@ -51,7 +52,9 @@ const ChattingBox = ({ setChatArr, chatArr }) => {
 
   return (
     <InputCtn>
-      <InputTopBox></InputTopBox>
+      <InputTopBox>
+     
+      </InputTopBox>
       <InputMidBox value={Message} 
       onChange={handleInputChange} 
       placeholder="메시지 보내기" />
