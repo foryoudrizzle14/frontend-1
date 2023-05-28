@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { io } from "socket.io-client";
 
 const ChannelBox = ({ SetChannels, channel, SetChannel, Channel }) => {
+  //주소는 변경 해야함 
   const socket = io("http://43.200.178.84", {
     transports: ["websocket"],
   });
